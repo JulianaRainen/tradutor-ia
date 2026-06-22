@@ -16,7 +16,7 @@ async function traduzir() {
 
         let endereco = "https://api.mymemory.translated.net/get?q="
             + encodeURIComponent(inputTexto.value)
-            + "&langpair=pt-BR|"
+            + "&langpair=pt|"
             + idioma.value
 
 
