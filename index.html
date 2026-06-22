@@ -1,12 +1,14 @@
-<!DOCTYPE html> 
+<!DOCTYPE html> <!-- ESTAMOS USANDO A VERSAO MAIS NOVA DO HTML -->
+
+
 
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
-    <title>TRADUTOR Juliana Rainen</title>
+    <link rel="stylesheet" href="styles.css">
+    <title>Tradutor Juliana Rainen </title>
 </head>
 
 <body>
@@ -15,19 +17,21 @@
         <textarea class="input-texto"></textarea>
 
         <div class="controle">
+            
             <select class="idioma">
-                <option>Inglês</option>
-                <option>Alemão</option>
-                <option>Japonês</option>
-                <option>Português</option>
-                <option>Espanhol</option>
+                <option value="en">Inglês</option>
+                <option value="es">Espanhol</option>
+                <option value="fr">Francês</option>
+                <option value="de">Alemão</option>
+                <option value="it">Italiano</option>
+                <option value="ja">Japonês</option>
             </select>
 
-            <button>
+            <button onclick="traduzir()">
                 <img src="/img/traduzir.svg">
             </button>
 
-            <button>
+            <button onclick="ouvirVoz()">
                 <img src="/img/microfone.svg">
             </button>
 
@@ -40,8 +44,12 @@
 
 
     </div>
-    <script src="script.js"></script>
-    
 </body>
+
+<script src="scripts.js">
+
+</script>
+
+
 
 </html>
