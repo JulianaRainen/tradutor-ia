@@ -17,7 +17,6 @@ async function traduzir() {
 
     traducaoTexto.textContent = dados.responseData.translatedText
 
-    // textContent = conteudo do texto
 }
 
 function ouvirVoz() {
