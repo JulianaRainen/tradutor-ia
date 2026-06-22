@@ -42,10 +42,13 @@ body {
     border-radius: 20px;
     outline: none;
     padding: 10px;
-    background-color: #ffffff1a;
+    background-color: #111;
     color: #ffffff;
 }
-
+.idioma option {
+    background-color: #111;
+    color: #ffffff;
+}
 button {
     border: none;
     padding: 10px;
