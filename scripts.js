@@ -64,3 +64,37 @@ function ouvirVoz() {
 
     reconhecimentoVoz.start()
 }
+
+function selecionarImagem() {
+    let inputImagem = document.querySelector("#imagem-traducao")
+
+    inputImagem.click()
+}
+
+async function traduzirImagem(evento) {
+    let imagem = evento.target.files[0]
+
+    if (!imagem) {
+        return
+    }
+
+    try {
+        traducaoTexto.textContent = "Extraindo texto da imagem..."
+
+        let resultado = await Tesseract.recognize(imagem, "por")
+        let textoExtraido = resultado.data.text.trim()
+
+        if (!textoExtraido) {
+            traducaoTexto.textContent = "Nenhum texto foi encontrado na imagem."
+            return
+        }
+
+        inputTexto.value = textoExtraido
+        traduzir()
+    } catch (erro) {
+        traducaoTexto.textContent = "Não foi possível traduzir o texto da imagem."
+        console.log("Erro:", erro)
+    } finally {
+        evento.target.value = ""
+    }
+}
