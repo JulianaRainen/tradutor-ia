@@ -65,8 +65,20 @@ function ouvirVoz() {
     reconhecimentoVoz.start()
 }
 
-function selecionarImagem() {
-    let inputImagem = document.querySelector("#imagem-traducao")
+function alternarOpcoesImagem() {
+    let menuImagem = document.querySelector(".menu-imagem")
+
+    menuImagem.classList.toggle("mostrar")
+}
+
+function selecionarImagem(origem) {
+    let inputImagem = document.querySelector("#imagem-galeria")
+
+    if (origem === "camera") {
+        inputImagem = document.querySelector("#imagem-camera")
+    }
+
+    document.querySelector(".menu-imagem").classList.remove("mostrar")
 
     inputImagem.click()
 }

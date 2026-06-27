@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css?v=2">
     <title>🌍 Rainen Translate</title>
 </head>
 
@@ -35,11 +35,19 @@
                 <img src="./img/microfone.svg" alt="Usar microfone">
             </button>
 
-            <input id="imagem-traducao" type="file" accept="image/*" onchange="traduzirImagem(event)" hidden>
+            <input id="imagem-galeria" type="file" accept="image/*" onchange="traduzirImagem(event)" hidden>
+            <input id="imagem-camera" type="file" accept="image/*" capture="environment" onchange="traduzirImagem(event)" hidden>
 
-            <button onclick="selecionarImagem()" type="button">
-                <img src="./img/camera.svg" alt="Traduzir imagem">
-            </button>
+            <div class="opcao-imagem">
+                <button onclick="alternarOpcoesImagem()" type="button">
+                    <img src="./img/camera.svg" alt="Traduzir imagem">
+                </button>
+
+                <div class="menu-imagem">
+                    <button onclick="selecionarImagem('galeria')" type="button">Galeria</button>
+                    <button onclick="selecionarImagem('camera')" type="button">Câmera</button>
+                </div>
+            </div>
         </div>
 
         <div class="resultado">

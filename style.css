@@ -65,6 +65,34 @@ button {
     margin-bottom: 20px;
 }
 
+.opcao-imagem {
+    position: relative;
+}
+
+.menu-imagem {
+    display: none;
+    position: absolute;
+    top: 48px;
+    right: 0;
+    background-color: #111;
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.menu-imagem.mostrar {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-imagem button {
+    border-radius: 0;
+    color: #ffffff;
+    padding: 10px 14px;
+    text-align: left;
+    white-space: nowrap;
+}
+
 .resultado {
     padding: 15px;
     background-color: #ffffff1a;
